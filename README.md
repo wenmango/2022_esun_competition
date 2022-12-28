@@ -1,17 +1,21 @@
-系統平台：Linux
-程式語言：python
-函式庫：pandas, numpy, lightgbm, xgboost, sklearn
+2022 Esun competition
+----
+
+# 系統環境
+* 系統平台：Linux
+* 程式語言：python
+* 函式庫：pandas, numpy, lightgbm, xgboost, sklearn
 
 
 # 檔案目錄
-
+```
 ├ Preprocess
 │ └ final_feature.py  (產出訓練用資料)
 ├ Model
 │ └ final_model.py    (訓練+推論+產出提交檔案)
 ├ requirements.txt
 └ README
-
+```
 
 # 復現步驟
 1. 在根目錄放入此次比賽的所有資料
@@ -21,6 +25,7 @@
 
 # 模型超參數
 * lightgbm 使用參數如下：
+	```
 	eta:0.005
 	max_depth:15
 	subsample:0.75
@@ -40,8 +45,9 @@
 	num_boost_round:5000
 	early_stopping_rounds:200
 	verbose:-100
-
+	```
 * xgboost 使用參數如下：
+	```
 	eta:0.005
 	max_depth:15
 	min_child_weight:5
@@ -55,6 +61,8 @@
 	num_boost_round:5000
 	early_stopping_rounds:200
 	seed:20221225
-
+	```
 * LogisticRegression 使用參數如下：
+	```
 	random_state:0
+	```
